@@ -1,24 +1,22 @@
 body {
   font-family: "Open Sans", sans-serif;
-}
-
-h1,
-h5 {
-  color: #202124;
+  background-color: #f9f7fe;
 }
 
 h1 {
+  color: #202124;
   font-size: 48px;
   margin-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 25px;
   text-align: right;
 }
 
-p {
-  font-size: 16px;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-ul {
+li {
   list-style: none;
   color: #70757a;
   line-height: 20px;
@@ -26,29 +24,73 @@ ul {
 
 a {
   text-decoration: none;
+  color: #8e7c93;
+}
+
+p {
+  font-size: 16px;
+}
+
+.weather-app-wrapper {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 .weather-app {
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
+  border: 1px solid #fff;
+  padding: 40px 40px 0px 40px;
   border-radius: 10px;
-  max-width: 800px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
-.col-6 {
-  padding-right: 40px;
+.btn {
+  margin: 0px 4px;
 }
 
-.float-left {
-  font-size: 48px;
-  line-height: 60px;
+.overview {
+  margin-top: 10px;
   margin-bottom: 10px;
-  padding-top: 20px;
 }
 
-.units {
-  font-size: 18px;
+.weather-temperature {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 84px;
+  width: 84px;
+  float: left;
+}
+
+.weather-temperature strong {
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.temperature-conditions {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .date-time {
@@ -57,13 +99,6 @@ a {
   line-height: 24px;
   text-align: right;
   padding-top: 8px;
-}
-
-.weather-conditions {
-  font-size: 13px;
-  position: relative;
-  left: -15px;
-  top: -8px;
 }
 
 .btn-outline-secondary {
@@ -76,4 +111,12 @@ a {
 
 .five-day-forecast {
   text-align: center;
+  margin-top: 40px;
+  color: #000;
+}
+
+.github-link {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }

@@ -20,129 +20,120 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="container">
-      <div class = "weather-app"> 
-        <form class="d-flex" id="city-search-form">
-          <div class = "row">
-            <div class ="col">
-                <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Enter a city name..."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-              />
-            </div>
-            <div class="col-3">
-                <input 
-                  class="btn btn-primary shadow-sm"
-                  type="submit"
-                  value="Search"
-                  id="search-button"
-                /> 
-              </div>
-              <div class="col-3">
-               <button 
-                  id="current-location-button" 
-                  class="btn btn-success"
-               >
-                Current
-              </button>
-          </div>
-        </div>
-      </form>
-      <div class="row">
-
-        <div class="col-6">
-          <div class="float-left">
-            <img
-              src="images/cloudy-day-1.svg"
-              class="card-image main"
-              alt="partly cloudy"
+      <div class = "weather-app-wrapper"> 
+        <div class = "weather-app"> 
+          <form id="city-search-form" class="d-flex">
+            <input
+              type="search"
+              placeholder="Enter a city name..."
+              class="form-control me-2"
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
             />
-            <span class="temperature" id="temperature"></span>
-            <span class="units">°C</span> 
+            <input 
+              class="btn btn-primary"
+              type="submit"
+              value="Search"
+              id="search-button"
+            /> 
+            <button 
+              id="current-location-button" 
+              class="btn btn-success"
+              >Current
+            </button>
+          </form>
+          <div class="row overview">
+            <div class="col-6">
+              <div class="clear-fix weather-temperature">
+                  <img src="images/cloudy-day-1.svg" class="float-left" alt="partly cloudy"/>
+                    <strong id="temperature"></strong>
+                    <span class="units">°C |°F</span></strong>
+              </div>
+              <div class="temperature-conditions">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
+            </div>        
+            <div class="col-6">
+              <h1 id="city"></h1>
+              <ul class="date-time">
+                <li id="date"></li>
+                <li id="description"></li>
+              </ul>
+            </div>
           </div>
-          <p>
-            <ul class="weather-conditions">
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
-            </ul>
-          </p>
-        </div>
-      <div class="col-6">
-        <h1 id="city"></h1>
-        <ul class="date-time">
-           <li id="date"></li>
-           <li id="description"></li>
-        </ul>
+          <div class="row five-day-forecast">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Wed</h5>
+                  <p class="card-image">
+                    <img src="images/cloudy-day-2.svg" alt="cloudy" />
+                  </p>
+                  <p class="card-text">8°C <span class="low-temp">2°C</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Thu</h5>
+                  <p class="card-image">
+                    <img
+                      src="images/cloudy.svg"
+                      alt="sunny with some clouds"
+                    />
+                  </p>
+                  <p class="card-text">9°C <span class="low-temp">8°C</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Fri</h5>
+                  <p class="card-image">
+                    <img src="images/rainy-6.svg" alt="heavy rain" />
+                  </p>
+                  <p class="card-text">13°C <span class="low-temp">11°C</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sat</h5>
+                  <p class="card-image">
+                    <img src="images/cloudy.svg" alt="cloudy" />
+                  </p>
+                  <p class="card-text">12°C <span class="low-temp">8°C</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sun</h5>
+                  <p class="card-image">
+                    <img src="images/rainy-1.svg" alt="light rain" />
+                  </p>
+                  <p class="card-text">12°C <span class="low-temp">7°C</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="github-link">
+            <small> 
+            <a href="https://github.com/chloebc9/weather-app" target="_blank"> Open Source</a> project coded by <a href="https://www.linkedin.com/in/chloe-bousquet-chavanne/" target="_blank">Chloe Bousquet-Chavanne</a></small> 
+          </div>
+        </div> 
       </div>
-      <div class="row" id="five-day-forecast">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Wed</h5>
-              <p class="card-image">
-                <img src="images/cloudy-day-2.svg" alt="cloudy" />
-              </p>
-              <p class="card-text">8°C <span class="low-temp">2°C</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thu</h5>
-              <p class="card-image">
-                <img
-                  src="images/cloudy.svg"
-                  alt="sunny with some clouds"
-                />
-              </p>
-              <p class="card-text">9°C <span class="low-temp">8°C</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Fri</h5>
-              <p class="card-image">
-                <img src="images/rainy-6.svg" alt="heavy rain" />
-              </p>
-              <p class="card-text">13°C <span class="low-temp">11°C</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sat</h5>
-              <p class="card-image">
-                <img src="images/cloudy.svg" alt="cloudy" />
-              </p>
-              <p class="card-text">12°C <span class="low-temp">8°C</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sun</h5>
-              <p class="card-image">
-                <img src="images/rainy-1.svg" alt="light rain" />
-              </p>
-              <p class="card-text">12°C <span class="low-temp">7°C</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <small><br>
-         <a href="https://github.com/chloebc9/weather-app" target="_blank">Open source code</a>, by Chloe Bousquet-Chavanne</small> 
-    </div>
+    </div>   
     <script src="script.js"></script>
   </body>
 </html>

@@ -45,6 +45,8 @@ function displayWeatherCondition(response) {
       "alt",
       response.data.weather[0].description
     );
+
+  getForecast(response.data.coord);
 }
 
 //Add a search engine, when searching for a city (i.e. Paris), display the city name on the page after the user submits the form.

@@ -61,7 +61,6 @@ function displayCity(event) {
 }
 
 //Add current location button functionality.
-
 function searchLocation(position) {
   let key = "4fefd93574c7263b1de6739f96f7742d";
   let lat = position.coords.latitude;

@@ -28,10 +28,6 @@ a {
   color: #8e7c93;
 }
 
-p {
-  font-size: 16px;
-}
-
 .weather-app-wrapper {
   max-width: 800px;
   margin: 50px auto;
@@ -49,6 +45,10 @@ p {
 
 .btn {
   margin: 0px 4px;
+}
+
+.btn-outline-secondary {
+  margin-left: 8px;
 }
 
 .overview {
@@ -102,18 +102,23 @@ p {
   padding-top: 8px;
 }
 
-.btn-outline-secondary {
-  margin-left: 8px;
-}
-
-.low-temp {
-  color: #70757a;
-}
-
 .five-day-forecast {
   text-align: center;
   margin-top: 40px;
   color: #000;
+}
+
+.card-title {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.card-text {
+  font-size: 13px;
+}
+
+.low-temp {
+  color: #70757a;
 }
 
 .github-link {

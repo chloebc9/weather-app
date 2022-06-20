@@ -22,8 +22,8 @@
   </head>
   <body>
     <div class="container">
-      <div class = "weather-app-wrapper"> 
-        <div class = "weather-app"> 
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
           <form id="city-search-form" class="d-flex">
             <input
               type="search"
@@ -33,24 +33,30 @@
               autocomplete="off"
               id="city-input"
             />
-            <input 
+            <input
               class="btn btn-primary"
               type="submit"
               value="Search"
               id="search-button"
-            /> 
-            <button 
-              id="current-location-button" 
-              class="btn btn-success"
-              >Current
+            />
+            <button id="current-location-button" class="btn btn-success">
+              Current
             </button>
           </form>
           <div class="row overview">
             <div class="col-6">
               <div class="clear-fix weather-temperature">
-                  <img src="images/cloudy-day-1.svg" class="float-left" alt="partly cloudy"/>
-                    <strong id="temperature"></strong>
-                    <span class="units">°C |°F</span></strong>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  id="icon"
+                  class="float-left"
+                  alt=""
+                />
+                <strong id="temperature"></strong>
+                <span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="farenheit-link">°F</a></span
+                >
               </div>
               <div class="temperature-conditions">
                 <ul>
@@ -58,7 +64,7 @@
                   <li>Wind: <span id="wind"></span>km/h</li>
                 </ul>
               </div>
-            </div>        
+            </div>
             <div class="col-6">
               <h1 id="city"></h1>
               <ul class="date-time">
@@ -84,10 +90,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Thu</h5>
                   <p class="card-image">
-                    <img
-                      src="images/cloudy.svg"
-                      alt="sunny with some clouds"
-                    />
+                    <img src="images/cloudy.svg" alt="sunny with some clouds" />
                   </p>
                   <p class="card-text">9°C <span class="low-temp">8°C</span></p>
                 </div>
@@ -100,7 +103,9 @@
                   <p class="card-image">
                     <img src="images/rainy-6.svg" alt="heavy rain" />
                   </p>
-                  <p class="card-text">13°C <span class="low-temp">11°C</span></p>
+                  <p class="card-text">
+                    13°C <span class="low-temp">11°C</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -111,7 +116,9 @@
                   <p class="card-image">
                     <img src="images/cloudy.svg" alt="cloudy" />
                   </p>
-                  <p class="card-text">12°C <span class="low-temp">8°C</span></p>
+                  <p class="card-text">
+                    12°C <span class="low-temp">8°C</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -122,18 +129,29 @@
                   <p class="card-image">
                     <img src="images/rainy-1.svg" alt="light rain" />
                   </p>
-                  <p class="card-text">12°C <span class="low-temp">7°C</span></p>
+                  <p class="card-text">
+                    12°C <span class="low-temp">7°C</span>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="github-link">
-            <small> 
-            <a href="https://github.com/chloebc9/weather-app" target="_blank"> Open Source</a> project coded by <a href="https://www.linkedin.com/in/chloe-bousquet-chavanne/" target="_blank">Chloe Bousquet-Chavanne</a></small> 
+            <small>
+              <a href="https://github.com/chloebc9/weather-app" target="_blank">
+                Open Source</a
+              >
+              project coded by
+              <a
+                href="https://www.linkedin.com/in/chloe-bousquet-chavanne/"
+                target="_blank"
+                >Chloe Bousquet-Chavanne</a
+              ></small
+            >
           </div>
-        </div> 
+        </div>
       </div>
-    </div>   
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
